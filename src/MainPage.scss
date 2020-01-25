@@ -553,3 +553,96 @@ body {
 }
 
 // === / person ===
+
+// === partners ===
+.partners {
+  background: linear-gradient(180deg, #fdf4f4 0%, #ecf3ec 100%);
+  padding: 40px 20px 50px 20px;
+
+  .inside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-title {
+    color: $color-red;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (min-width: $screen-sm) {
+      font-size: 70px;
+      margin: 60px 0;
+      line-height: 70px;
+    }
+    @media (max-width: $screen-xs-max) {
+      font-size: 40px;
+      line-height: 40px;
+      margin-top: 70px;
+      margin-bottom: 34px;
+    }
+  }
+
+  &-years {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 34px;
+    &__year {
+      font-family: sans-serif;
+      background: $color-white;
+      border: 1px solid $color-gray-light;
+      box-sizing: border-box;
+      border-radius: 4px;
+      color: $color-gray-light;
+      padding: 10px 12px;
+      outline: none;
+      text-decoration: none;
+      margin-bottom: 10px;
+      margin-right: 5px;
+    }
+  }
+
+  &-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $screen-xs-max) {
+      flex-direction: column;
+    }
+    .card {
+      @media (max-width: $screen-xs-max) {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      &__logo {
+        @media (max-width: $screen-xs-max) {
+          margin-bottom: 20px;
+        }
+      }
+      &__title {
+        @media (max-width: $screen-xs-max) {
+          color: $color-gray;
+          font-family: sans-serif;
+          font-size: 18px;
+          margin-bottom: 16px;
+          padding-left: 10px;
+        }
+      }
+      &__text {
+        @media (max-width: $screen-xs-max) {
+          color: $color-gray;
+          font-family: sans-serif;
+          font-size: 16px;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+// === / partners ===
