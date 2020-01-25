@@ -3,17 +3,16 @@ import "./MainPage.scss"
 
 import logo from "./assets/logo.svg"
 import burger from "./assets/burger.svg"
-import backmobile from "./assets/backmobile.png"
 import cup1 from "./assets/cup1.svg"
 import cup2 from "./assets/cup2.svg"
 import cup3 from "./assets/cup3.png"
 import cup4 from "./assets/cup4.svg"
 import ec from "./assets/ec.svg"
-// import instagram from './assets/instagram.svg'
-// import phone from './assets/phone.svg'
+import instagram from './assets/instagram.svg'
+import phone from './assets/phone.svg'
 import planet from "./assets/planet.svg"
 import russia from "./assets/russia.svg"
-// import vk from './assets/vk.svg'
+import vk from './assets/vk.svg'
 
 const MainPage = () => {
   return (
@@ -26,15 +25,15 @@ const MainPage = () => {
               <div className="menu__links">
                 <div className="desktop-only">
                   <div className="menu__links-phone">
-                    <img src="" alt="" />
+                    <img src={phone} alt="" />
                     <a href="0#">8 499 999 99 99</a>
                   </div>
                   <div className="menu__links-social">
                     <a href="0#">
-                      <img src="" alt="" />
+                      <img src={instagram} alt="" />
                     </a>
                     <a href="0#">
-                      <img src="" alt="" />
+                      <img src={vk} alt="" />
                     </a>
                   </div>
                 </div>
@@ -46,7 +45,7 @@ const MainPage = () => {
 
             <div className="header-main__title">
               <h1>Lorem ipsum dolor sit amet</h1>
-              <h3 className="header-main__subtitle">
+              <h3>
                 <span>lorem</span> ipsum dolor sit amet
               </h3>
             </div>
