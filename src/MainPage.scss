@@ -9,6 +9,7 @@
 
 // === variables ===
 $color-white: #ffffff;
+$color-white-gray: #e5e5e5;
 $color-red: #ff3754;
 $color-gray-light: #888888;
 $color-gray: #303030;
@@ -55,7 +56,7 @@ body {
 }
 .inside {
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: 1180px;
 }
 
 // === / common ===
@@ -72,10 +73,13 @@ body {
   .inside {
     display: flex;
     flex-direction: column;
-    height: 100vh;
 
     @media (min-width: $screen-sm) {
       justify-content: space-between;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      height: 100vh;
     }
   }
 
@@ -297,3 +301,149 @@ body {
 }
 
 // === / header ===
+
+// === person ===
+.outside {
+  padding-top: 90px;
+  .person {
+    background-color: $color-white;
+
+    &-title {
+      color: $color-red;
+      font-size: 70px;
+      margin-bottom: 60px;
+      line-height: 70px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &__left,
+      &__right {
+        border: none;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        &:not(:first-child) {
+          margin-left: 50px;
+        }
+        &:not(:last-child) {
+          margin-right: 50px;
+        }
+
+
+        img {
+          width: 30px;
+          height: 25px;
+          
+        }
+      }
+      &__num {
+        color: $color-gray;
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+  }
+  .person-slid {
+    position: relative;
+    margin-bottom: 60px;
+    &__border1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &__border2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: scale(-1, 1);
+    }
+
+    &__inform {
+      margin: 0 auto 40px;
+      width: 85%;
+      &-wrapper {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .content {
+        &__surname {
+          color: $color-red;
+          font-size: 70px;
+          margin-bottom: 14px;
+          line-height: 70px;
+          text-transform: uppercase;
+        }
+        &__name {
+          color: $color-gray-light;
+          font-size: 40px;
+          margin-bottom: 20px;
+          line-height: 40px;
+          text-transform: uppercase;
+        }
+        &__status {
+          font-family: sans-serif;
+          color: $color-gray;
+          font-size: 14px;
+          margin-bottom: 40px;
+          line-height: 16px;
+          text-transform: uppercase;
+        }
+
+        &__reward {
+          font-family: sans-serif;
+          font-size: 18px;
+          margin-bottom: 30px;
+          padding-left: 20px;
+
+          li {
+            color: $color-gray;
+            list-style-image: url("./assets/list.svg");
+            padding-left: 30px;
+            &:not(:last-child) {
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .description {
+          &__title {
+            font-family: sans-serif;
+            color: $color-black;
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+          &__text {
+            color: $color-gray;
+            font-family: sans-serif;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: justify;
+            width: 90%;
+          }
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      &-photo {
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .slick-slider {
+    ul {
+      display: none !important;
+    }
+  }
+}
+
+// === / person ===

@@ -13,6 +13,7 @@ import phone from './assets/phone.svg'
 import planet from "./assets/planet.svg"
 import russia from "./assets/russia.svg"
 import vk from './assets/vk.svg'
+import SimpleSlider from "./SimpleSlider"
 
 const MainPage = () => {
   return (
@@ -90,57 +91,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section className="outside person">
-        <div className="inside">
-          <h1 className="person-title">Второй блок</h1>
-          <div className="person-inform">
-            <div className="person-inform__wrapper">
-              <div className="person-inform__content">
-                <p className="person-inform__content-surname">Лоремова</p>
-                <p className="person-inform__content-name">
-                  Ипсума Анатольевна
-                </p>
-                <p className="person-inform__content-status">
-                  Lorem ipsum dolor
-                </p>
-                <ul className="person-inform__content-reward">
-                  <li>lorem ipsum dolorlorem ipsum dolor</li>
-                  <li>lorem ipsum dolor</li>
-                  <li>
-                    lorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem{" "}
-                  </li>
-                  <li>lorem ipsum dolor</li>
-                  <li>lorem ipsum dolor</li>
-                  <li>lorem ipsum dolor</li>
-                </ul>
-                <div className="person-inform__content-description description">
-                  <h1 className="description__title">Lorem ipsum</h1>
-                  <p className="description__text">
-                    lorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem
-                    ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum
-                    dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolor
-                  </p>
-                </div>
-
-                <div className="person-inform__content-description description">
-                  <h1 className="description__title">Lorem ipsum</h1>
-                  <p className="description__text">
-                    lorem ipsum dolorlorem ipsum dolor
-                  </p>
-                </div>
-                <div className="person-inform__photo">
-                  <img src="" alt="" />
-                </div>
-                <div className="person-pagination">
-                  <img src="" alt="" />
-                  <span>1 из 5</span>
-                  <img src="" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SimpleSlider />
       <section className="outside partners">
         <div className="inside">
           <h1 className="partners-title">Третий блок</h1>
