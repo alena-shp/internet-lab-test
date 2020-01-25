@@ -1,0 +1,188 @@
+@import "normalize.scss";
+
+// === mixins ===
+@mixin font-main {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+// === / mixing ===
+
+// === variables ===
+$color-white: #ffffff;
+$color-red: #ff3754;
+$color-gray-light: #888888;
+$color-gray: #303030;
+$color-black: #000000;
+
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-xs-max: 575px;
+$screen-md-max: 767px;
+$screen-lg-max: 991px;
+$screen-xl-max: 1199px;
+
+/* Mobile */
+@media (max-width: $screen-xs-max) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+/* Desktop */
+@media (min-width: $screen-sm) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+// === / variables ===
+
+// === common ===
+* {
+  box-sizing: border-box;
+}
+body {
+}
+
+.inside {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+// === / common ===
+
+// === header ===
+.header {
+  color: $color-white;
+
+  @media (min-width: $screen-sm) {
+    background: url("./assets/background.png") no-repeat 50% 50%;
+    background-size: cover;
+  }
+
+  .inside {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    @media (min-width: $screen-sm) {
+      justify-content: space-between;
+    }
+  }
+
+  &-main {
+    @media (max-width: $screen-xs-max) {
+      background: url("./assets/background.png") no-repeat 50% 50%;
+      background-size: cover;
+      display: flex;
+      flex-basis: 50vh;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px 14px 12px 14px;
+    }
+
+    .menu {
+      align-items: center;
+      display: flex;
+      flex-shrink: 1;
+      justify-content: space-between;
+    }
+
+    &__title {
+      @include font-main;
+      h1 {
+        color: $color-white;
+        font-size: 50px;
+        margin-bottom: 16px;
+        line-height: 50px;
+        text-transform: uppercase;
+
+        @media (max-width: $screen-xs-max) {
+          order: 1;
+        }
+      }
+      h3 {
+        color: $color-white;
+        font-family: sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        span {
+          color: $color-red;
+        }
+        @media (max-width: $screen-xs-max) {
+          order: 2;
+        }
+      }
+    }
+  }
+
+  &-secondary {
+    flex-basis: 50vh;
+    flex-direction: column;
+    display: flex;
+    padding: 10px;
+    &__action {
+      background: $color-red;
+      border-radius: 4px;
+      color: $color-white;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 16px;
+      margin: 0;
+      line-height: 19px;
+      outline: none;
+      padding: 20px 0;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .rating {
+      &-group {
+        align-items: center;
+        color: $color-gray;
+        display: flex;
+
+        &__position {
+          @media (max-width: $screen-xs-max) {
+            display: block;
+            height: auto;
+            max-width: 100%;
+          }
+        }
+        &__country {
+        }
+
+        &__name {
+          color: $color-gray;
+          font-size: 14px;
+          margin-left: 14px;
+          line-height: 17px;
+          outline: none;
+          text-decoration: none;
+        }
+        .active {
+          color: $color-white;
+          background: $color-red;
+          border-radius: 4px;
+          cursor: pointer;
+          padding: 6px 12px 6px 6px;
+          font-size: 20px;
+          line-height: 24px;
+          text-align: center;
+        }
+
+        @media (max-width: $screen-xs-max) {
+        }
+      }
+    }
+  }
+}
+
+// === / header ===

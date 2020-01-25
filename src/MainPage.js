@@ -1,64 +1,93 @@
 import React from "react"
 import "./MainPage.scss"
 
+import logo from "./assets/logo.svg"
+import burger from "./assets/burger.svg"
+import backmobile from "./assets/backmobile.png"
+import cup1 from "./assets/cup1.svg"
+import cup2 from "./assets/cup2.svg"
+import cup3 from "./assets/cup3.png"
+import cup4 from "./assets/cup4.svg"
+import ec from "./assets/ec.svg"
+// import instagram from './assets/instagram.svg'
+// import phone from './assets/phone.svg'
+import planet from "./assets/planet.svg"
+import russia from "./assets/russia.svg"
+// import vk from './assets/vk.svg'
+
 const MainPage = () => {
   return (
     <>
       <section className="outside header">
         <div className="inside">
-          <div className="header-menu">
-            <img className="header-menu__logo" src="" alt="" />
-            <div className="header-menu__links">
-              <div className="header-menu__links-phone">
-                <img src="" alt="" />
-                <a href="0#">8 499 999 99 99</a>
+          <div className="header-main">
+            <div className="header-main__menu menu">
+              <img className="menu__logo" src={logo} alt="" />
+              <div className="menu__links">
+                <div className="desktop-only">
+                  <div className="menu__links-phone">
+                    <img src="" alt="" />
+                    <a href="0#">8 499 999 99 99</a>
+                  </div>
+                  <div className="menu__links-social">
+                    <a href="0#">
+                      <img src="" alt="" />
+                    </a>
+                    <a href="0#">
+                      <img src="" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div className="menu__links-burger">
+                  <img src={burger} alt="" />
+                </div>
               </div>
-              <div className="header-menu__links-social">
-                <a href="0#">
-                  <img src="" alt="" />
-                </a>
-                <a href="0#">
-                  <img src="" alt="" />
-                </a>
-              </div>
-              <div className="header-menu__links-burger">
-                <img src="" alt="" />
-              </div>
+            </div>
+
+            <div className="header-main__title">
+              <h1>Lorem ipsum dolor sit amet</h1>
+              <h3 className="header-main__subtitle">
+                <span>lorem</span> ipsum dolor sit amet
+              </h3>
             </div>
           </div>
-          <div className="header-content">
-            <h1 className="header-content__title">
-              Lorem ipsum dolor sit amet
-            </h1>
-            <h3 className="header-content__subtitle">
-              lorem ipsum dolor sit amet
-            </h3>
-            <div className="header-content__rating rating">
-              <img className="rating__position" src="" alt="" />
-              <img className="rating__country" src="" alt="" />
-              <p className="rating__name active">lorem ipsum</p>
-            </div>
+          <div className="header-secondary">
+            <a className="header-secondary__action" href="#0">
+              lorem ipsum dolor
+            </a>
+            <div className="header-secondary__rating rating">
+              <div className="rating-group">
+                <img className="rating-group__position" src={cup1} alt="" />
+                <img className="rating-group__country" src={planet} alt="" />
+                <a className="rating-group__name active" href="0#">
+                  lorem ipsum dol
+                </a>
+              </div>
 
-            <div className="header-content__rating rating">
-              <img className="rating__position" src="" alt="" />
-              <img className="rating__country" src="" alt="" />
-              <p className="rating__name active">Lorem ipsum</p>
-            </div>
+              <div className="rating-group">
+                <img className="rating-group__position" src={cup2} alt="" />
+                <img className="rating-group__country" src={ec} alt="" />
+                <a className="rating-group__name " href="0#">
+                  lorem ipsum dolor
+                </a>
+              </div>
 
-            <div className="header-content__rating rating">
-              <img className="rating__position" src="" alt="" />
-              <img className="rating__country" src="" alt="" />
-              <p className="rating__name active">Lorem ipsum</p>
-            </div>
+              <div className="rating-group">
+                <img className="rating-group__position" src={cup3} alt="" />
+                <img className="rating-group__country" src={ec} alt="" />
+                <a className="rating-group__name " href="0#">
+                  lorem ipsum dolor sit amet
+                </a>
+              </div>
 
-            <div className="header-content__rating rating">
-              <img className="rating__position" src="" alt="" />
-              <img className="rating__country" src="" alt="" />
-              <p className="rating__name active">Lorem ipsum</p>
+              <div className="rating-group">
+                <img className="rating-group__position" src={cup4} alt="" />
+                <img className="rating-group__country" src={russia} alt="" />
+                <a className="rating-group__name " href="0#">
+                  lorem ipsum
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="header-action">
-            <a href="#0">lorem ipsum dolor</a>
           </div>
         </div>
       </section>
