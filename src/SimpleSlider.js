@@ -8,6 +8,7 @@ import "./MainPage.scss"
 import border from "./assets/border.png"
 import leftarrow from "./assets/leftarrow .svg"
 import rightarrow from "./assets/rightarrow.svg"
+import photoface from "./assets/photoface.png"
 
 export default class SimpleSlider extends Component {
   constructor(props) {
@@ -34,14 +35,19 @@ export default class SimpleSlider extends Component {
         <h1 className="person-title">Второй блок</h1>
         <Slider ref={c => (this.slider = c)} {...settings}>
           <div key={1} className="person-slid">
-            <img className="person-slid__border1" src={border} alt="" />
+            <img
+              className="person-slid__border1 desktop-only"
+              src={border}
+              alt=""
+            />
             <div className="person-slid__inform">
               <div className="person-slid__inform-wrapper">
                 <div className="person-slid__inform-content content">
                   <p className="content__surname">Лоремова</p>
                   <p className="content__name">Ипсума Анатольевна</p>
                   <p className="content__status">Lorem ipsum dolor</p>
-                  <div className="content__reward">
+                  <a href="0#" className="content__action mobile-only">Скрыть</a>
+                  <ul className="content__reward">
                     <li>lorem ipsum dolorlorem ipsum dolor</li>
                     <li>lorem ipsum dolor</li>
                     <li>
@@ -50,7 +56,7 @@ export default class SimpleSlider extends Component {
                     <li>lorem ipsum dolor</li>
                     <li>lorem ipsum dolor</li>
                     <li>lorem ipsum dolor</li>
-                  </div>
+                  </ul>
                   <div className="content__description description">
                     <h1 className="description__title">Lorem ipsum</h1>
                     <p className="description__text">
@@ -67,12 +73,19 @@ export default class SimpleSlider extends Component {
                     </p>
                   </div>
                 </div>
-                <div className="person-slid__inform-photo">
-                  <img src="https://picsum.photos/550/550" alt="" />
-                </div>
+
+                <img
+                  className="person-slid__inform-photo"
+                  src={photoface}
+                  alt=""
+                />
               </div>
             </div>
-            <img className="person-slid__border2" src={border} alt="" />
+            <img
+              className="person-slid__border2 desktop-only"
+              src={border}
+              alt=""
+            />
           </div>
 
           <div key={2}>
