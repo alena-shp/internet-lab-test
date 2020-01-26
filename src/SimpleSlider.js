@@ -46,7 +46,9 @@ export default class SimpleSlider extends Component {
                   <p className="content__surname">Лоремова</p>
                   <p className="content__name">Ипсума Анатольевна</p>
                   <p className="content__status">Lorem ipsum dolor</p>
-                  <a href="0#" className="content__action mobile-only">Скрыть</a>
+                  <a href="0#" className="content__action mobile-only">
+                    Скрыть
+                  </a>
                   <ul className="content__reward">
                     <li>lorem ipsum dolorlorem ipsum dolor</li>
                     <li>lorem ipsum dolor</li>

@@ -32,7 +32,6 @@ $screen-xl-max: 1199px;
     display: none !important;
   }
 }
-
 // === / variables ===
 
 // === common ===
@@ -153,7 +152,7 @@ $screen-xl-max: 1199px;
 
     &__title {
       h1 {
-        font-family: "Bebas Neue", sans-serif;
+        font-family: "BebasBold", sans-serif;
         color: $color-white;
         text-transform: uppercase;
 
@@ -314,12 +313,10 @@ $screen-xl-max: 1199px;
 // === person ===
 .person {
   background-color: $color-white;
-  position: relative;
-  z-index: -1;
 
   &-title {
     color: $color-red;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "BebasBold", sans-serif;
     text-transform: uppercase;
     text-align: center;
 
@@ -428,7 +425,7 @@ $screen-xl-max: 1199px;
         }
         &__surname {
           color: $color-red;
-          font-family: "Bebas Neue", sans-serif;
+          font-family: "BebasBold", sans-serif;
           margin-bottom: 14px;
           text-transform: uppercase;
 
@@ -444,7 +441,7 @@ $screen-xl-max: 1199px;
         }
         &__name {
           color: $color-gray-light;
-          font-family: "Bebas Neue", sans-serif;
+          font-family: "BebasBold", sans-serif;
           margin-bottom: 20px;
           text-transform: uppercase;
 
@@ -602,7 +599,7 @@ $screen-xl-max: 1199px;
 
   &-title {
     color: $color-red;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "BebasBold", sans-serif;
     text-transform: uppercase;
     text-align: center;
 
