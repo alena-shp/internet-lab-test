@@ -1,0 +1,107 @@
+@import "./MainPage.scss";
+
+.burgermenu {
+  .menu {
+    display: none;
+    position: fixed;
+
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(50px);
+
+    @media (min-width: $screen-sm) {
+      top: 98px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      top: 60px;
+    }
+
+    &--open {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: $screen-xs-max) {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20px;
+      }
+
+      ul {
+        padding-left: 0;
+      }
+
+      li {
+        list-style-type: none;
+        @media (min-width: $screen-sm) {
+          margin-bottom: 40px;
+        }
+        @media (max-width: $screen-xs-max) {
+          margin-bottom: 16px;
+        }
+      }
+      a {
+        text-decoration: none;
+
+        color: #303030;
+        font-family: "MuseoSansBold", sans-serif;
+
+        @media (min-width: $screen-sm) {
+          font-size: 50px;
+        }
+
+        @media (max-width: $screen-xs-max) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .menu__phone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+
+      img {
+        margin-right: 20px;
+      }
+
+      span {
+        font-size: 24px;
+        color: #303030;
+        font-family: "MuseoSansBold", sans-serif;
+      }
+    }
+
+    &__social {
+      a:not(:last-child) {
+        margin-right: 28px;
+      }
+    }
+
+    &__button {
+      span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img:first-child {
+          margin-bottom: 10px;
+        }
+      }
+
+      &--open {
+        img {
+          transform: rotate(45deg) translate(-2px, -9px);
+          filter: invert(1);
+        }
+        img:first-child {
+          transform: rotate(-45deg) translate(0, 6px);
+          filter: invert(1);
+        }
+      }
+    }
+  }
+}

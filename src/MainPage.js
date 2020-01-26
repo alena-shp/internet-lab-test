@@ -1,8 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
+import classNames from "classnames"
 import "./MainPage.scss"
 
 import logo from "./assets/logo.svg"
-import burger from "./assets/burger.svg"
 import cup1 from "./assets/cup1.svg"
 import cup2 from "./assets/cup2.svg"
 import cup3 from "./assets/cup3.png"
@@ -19,20 +19,23 @@ import amazon from "./assets/amazon.svg"
 import compan from "./assets/compan.svg"
 import frame from "./assets/frame.png"
 import SimpleSlider from "./SimpleSlider"
+import BurgerMenu from "./BurgerMenu"
+
 
 const MainPage = () => {
   return (
     <>
+    
       <section className="outside header">
         <div className="inside">
           <div className="header-main">
-            <div className="header-main__menu menu">
-              <img className="menu__logo" src={logo} alt="" />
+            <div className="header-main__menu menu active-burger">
+              <img className="menu__logo  active-burger__logo" src={logo} alt="" />
               <div className="menu__links">
                 <div className="desktop-only">
                   <div className="menu__links-phone">
                     <img src={phone} alt="" />
-                    <a href="0#">8 499 999 99 99</a>
+                    <span>8 499 999 99 99</span>
                   </div>
                   <div className="menu__links-social">
                     <a href="0#">
@@ -44,12 +47,12 @@ const MainPage = () => {
                   </div>
                 </div>
                 <div className="menu__links-burger">
-                  <img src={burger} alt="" />
+                 <BurgerMenu />
                 </div>
               </div>
             </div>
 
-            <div className="header-main__title">
+            <div className="header-main__title active-burger-title">
               <h1>Lorem ipsum dolor sit amet</h1>
               <h3>
                 <span>lorem</span> ipsum dolor sit amet

@@ -98,6 +98,7 @@ $screen-xl-max: 1199px;
       justify-content: space-between;
 
       @media (min-width: $screen-sm) {
+        padding-bottom: 30px;
         &__logo {
           width: 220px;
           height: auto;
@@ -114,8 +115,8 @@ $screen-xl-max: 1199px;
 
         &-phone {
           margin-right: 40px;
-          a {
-            color: $color-white;
+          color: $color-white;
+          span {
             font-family: "MuseoSansRegular", sans-serif;
             font-size: 24px;
             line-height: 29px;
@@ -194,6 +195,7 @@ $screen-xl-max: 1199px;
     }
     &__action {
       background: $color-red;
+      border: 1px solid $color-red;
       border-radius: 4px;
       color: $color-white;
       cursor: pointer;
@@ -214,6 +216,12 @@ $screen-xl-max: 1199px;
       }
       @media (max-width: $screen-xs-max) {
         margin-bottom: 30px;
+      }
+      &:hover {
+        background: $color-white;
+        border-radius: 4px;
+        color: $color-red;
+        border: 1px solid $color-red;
       }
     }
 
@@ -363,16 +371,25 @@ $screen-xl-max: 1199px;
       margin-bottom: 60px;
     }
 
-    &__border1 {
-      position: absolute;
-      top: 0;
-      left: 0;
+    @media (min-width: $screen-lg) {
+      &__border1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &__border2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: scale(-1, 1);
+      }
     }
-    &__border2 {
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: scale(-1, 1);
+
+    @media (max-width: $screen-lg-max) {
+      &__border1,
+      &__border2 {
+        display: none;
+      }
     }
 
     &__inform {
@@ -529,7 +546,7 @@ $screen-xl-max: 1199px;
       }
 
       &-photo {
-        @media (min-width: $screen-sm) {
+        @media (min-width: $screen-lg) {
           width: 550px;
           height: auto;
         }
@@ -537,9 +554,11 @@ $screen-xl-max: 1199px;
         @media (max-width: $screen-xs-max) {
           order: 1;
           display: block;
-          max-width: 50%;
           height: auto;
           margin-bottom: 30px;
+        }
+        @media (max-width: $screen-lg-max) {
+          max-width: 50%;
         }
       }
     }
@@ -719,3 +738,29 @@ $screen-xl-max: 1199px;
 }
 
 // === / footer ===
+
+// === active-burger ===
+
+.active-burger {
+  background-color: $color-white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
+
+  .menu__logo {
+    filter: invert(1);
+  }
+
+  .menu__links-phone {
+    color: $color-black;
+  }
+}
+
+  .active-burger-title {
+    padding-top: 110px;
+  }
+
+
+// ===  / active-burger ===
