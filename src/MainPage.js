@@ -8,15 +8,15 @@ import cup2 from "./assets/cup2.svg"
 import cup3 from "./assets/cup3.png"
 import cup4 from "./assets/cup4.svg"
 import ec from "./assets/ec.svg"
-import instagram from './assets/instagram.svg'
-import phone from './assets/phone.svg'
+import instagram from "./assets/instagram.svg"
+import phone from "./assets/phone.svg"
 import planet from "./assets/planet.svg"
 import russia from "./assets/russia.svg"
-import facebook from './assets/facebook.svg'
-import sony from './assets/sony.svg'
-import vk from './assets/vk.svg'
-import amazon from './assets/amazon.svg'
-import compan  from './assets/compan.svg'
+import facebook from "./assets/facebook.svg"
+import sony from "./assets/sony.svg"
+import vk from "./assets/vk.svg"
+import amazon from "./assets/amazon.svg"
+import compan from "./assets/compan.svg"
 import SimpleSlider from "./SimpleSlider"
 
 const MainPage = () => {
@@ -100,84 +100,118 @@ const MainPage = () => {
         <div className="inside">
           <h1 className="partners-title">Третий блок</h1>
           <div className="partners-years mobile-only">
-            <a className="partners-years__year active" href="0#">2019</a>
-            <a className="partners-years__year" href="0#">2018</a>
-            <a className="partners-years__year" href="0#">2017</a>
-            <a className="partners-years__year" href="0#">2016</a>
-            <a className="partners-years__year" href="0#">2015</a>
-            <a className="partners-years__year" href="0#">2014</a>
-            <a className="partners-years__year" href="0#">2013</a>
-            <a className="partners-years__year" href="0#">2012</a>
-            <a  className="partners-years__year" href="0#">2011</a>
+            <a className="partners-years__year active" href="0#">
+              2019
+            </a>
+            <a className="partners-years__year" href="0#">
+              2018
+            </a>
+            <a className="partners-years__year" href="0#">
+              2017
+            </a>
+            <a className="partners-years__year" href="0#">
+              2016
+            </a>
+            <a className="partners-years__year" href="0#">
+              2015
+            </a>
+            <a className="partners-years__year" href="0#">
+              2014
+            </a>
+            <a className="partners-years__year" href="0#">
+              2013
+            </a>
+            <a className="partners-years__year" href="0#">
+              2012
+            </a>
+            <a className="partners-years__year" href="0#">
+              2011
+            </a>
           </div>
           <div className="partners-cards">
-            <div className="partners-cards__card card">
-              <img className="card__logo" src={facebook} alt="" />
-              <h1 className="card__title">Lorem ipsum dolor sit amet</h1>
-              <p className="card__text">
+            <div className="partners-card">
+              <img className="partners-card__logo" src={facebook} alt="" />
+              <h1 className="partners-card__title">
+                Lorem ipsum dolor sit amet
+              </h1>
+              <p className="partners-card__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 in nulla interdum felis placerat vulputate
               </p>
             </div>
 
-            <div className="partners-cards__card card">
-              <img className="card__logo" src={amazon} alt="" />
-              <h1 className="card__title">Lorem ipsum dolor sit amet</h1>
-              <p className="card__text">
+            <div className="partners-card">
+              <img className="partners-card__logo" src={amazon} alt="" />
+              <h1 className="partners-card__title">
+                Lorem ipsum dolor sit amet
+              </h1>
+              <p className="partners-card__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 in nulla interdum felis placerat vulputate
               </p>
             </div>
 
-            <div className="partners-cards__card card">
-              <img className="card__logo" src={sony} alt="" />
-              <h1 className="card__title">Lorem ipsum dolor sit amet</h1>
-              <p className="card__text">
+            <div className="partners-card">
+              <img className="partners-card__logo" src={sony} alt="" />
+              <h1 className="partners-card__title">
+                Lorem ipsum dolor sit amet
+              </h1>
+              <p className="partners-card__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 in nulla interdum felis placerat vulputate
               </p>
             </div>
 
-            <div className="partners-cards__card card">
-              <img className="card__logo" src={compan} alt="" />
-              <h1 className="card__title">Lorem ipsum dolor sit amet</h1>
-              <p className="card__text">
+            <div className="partners-card">
+              <img className="partners-card__logo" src={compan} alt="" />
+              <h1 className="partners-card__title">
+                Lorem ipsum dolor sit amet
+              </h1>
+              <p className="partners-card__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 in nulla interdum felis placerat vulputate
               </p>
             </div>
 
-            <div className="partners-cards__card card">
-              <img className="card__logo" src={facebook} alt="" />
-              <h1 className="card__title">Lorem ipsum dolor sit amet</h1>
-              <p className="card__text">
+            <div className="partners-card">
+              <img className="partners-card__logo" src={facebook} alt="" />
+              <h1 className="partners-card__title">
+                Lorem ipsum dolor sit amet
+              </h1>
+              <p className="partners-card__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 in nulla interdum felis placerat vulputate
               </p>
             </div>
 
-            <div className="partners-cards__card card">
-              <img className="card__logo" src={amazon} alt="" />
-              <h1 className="card__title">Lorem ipsum dolor sit amet</h1>
-              <p className="card__text">
+            <div className="partners-card">
+              <img className="partners-card__logo" src={amazon} alt="" />
+              <h1 className="partners-card__title">
+                Lorem ipsum dolor sit amet
+              </h1>
+              <p className="partners-card__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 in nulla interdum felis placerat vulputate
               </p>
             </div>
 
-            <div className="partners-cards__card card">
-              <img className="card__logo" src={sony} alt="" />
-              <h1 className="card__title">Lorem ipsum dolor sit amet</h1>
-              <p className="card__text">
+            <div className="partners-card">
+              <img className="partners-card__logo" src={sony} alt="" />
+              <h1 className="partners-card__title">
+                Lorem ipsum dolor sit amet
+              </h1>
+              <p className="partners-card__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 in nulla interdum felis placerat vulputate
               </p>
             </div>
 
-            <div className="partners-cards__card card">
-              <img className="card__logo" src={compan} alt="" />
-              <h1 className="card__title">Lorem ipsum dolor sit amet</h1>
-              <p className="card__text">
+            <div className="partners-card">
+              <img className="partners-card__logo" src={compan} alt="" />
+              <h1 className="partners-card__title">
+                Lorem ipsum dolor sit amet
+              </h1>
+              <p className="partners-card__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 in nulla interdum felis placerat vulputate
               </p>
@@ -191,7 +225,6 @@ const MainPage = () => {
           <img className="footer-logo" src="" alt="" />
         </div>
       </section>
-
     </>
   )
 }
