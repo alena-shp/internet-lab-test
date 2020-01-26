@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import classNames from "classnames"
+import { StickyContainer, Sticky } from "react-sticky"
+
 import "./MainPage.scss"
 
 import logo from "./assets/logo.svg"
@@ -21,36 +23,56 @@ import frame from "./assets/frame.png"
 import SimpleSlider from "./SimpleSlider"
 import BurgerMenu from "./BurgerMenu"
 
-
 const MainPage = () => {
+  const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false)
+
+  const toggleOpenBurgerMenu = () => {
+    setIsOpenBurgerMenu(!isOpenBurgerMenu)
+  }
+
+  const getMenuClasses = isSticky =>
+    classNames("header-main__menu", "menu", {
+      "menu--active": isOpenBurgerMenu || isSticky
+    })
+
   return (
-    <>
-    
+    <StickyContainer>
       <section className="outside header">
         <div className="inside">
           <div className="header-main">
-            <div className="header-main__menu menu active-burger">
-              <img className="menu__logo  active-burger__logo" src={logo} alt="" />
-              <div className="menu__links">
-                <div className="desktop-only">
-                  <div className="menu__links-phone">
-                    <img src={phone} alt="" />
-                    <span>8 499 999 99 99</span>
-                  </div>
-                  <div className="menu__links-social">
-                    <a href="0#">
-                      <img src={instagram} alt="" />
-                    </a>
-                    <a href="0#">
-                      <img src={vk} alt="" />
-                    </a>
+            <Sticky topOffset={30}>
+              {({ isSticky }) => (
+                <div className={getMenuClasses(isSticky)}>
+                  <img
+                    className="menu__logo active-burger__logo"
+                    src={logo}
+                    alt=""
+                  />
+                  <div className="menu__links">
+                    <div className="desktop-only">
+                      <div className="menu__links-phone">
+                        <img src={phone} alt="" />
+                        <span>8 499 999 99 99</span>
+                      </div>
+                      <div className="menu__links-social">
+                        <a href="0#">
+                          <img src={instagram} alt="" />
+                        </a>
+                        <a href="0#">
+                          <img src={vk} alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="menu__links-burger">
+                      <BurgerMenu
+                        isOpenBurgerMenu={isOpenBurgerMenu}
+                        toggleOpenBurgerMenu={toggleOpenBurgerMenu}
+                      />
+                    </div>
                   </div>
                 </div>
-                <div className="menu__links-burger">
-                 <BurgerMenu />
-                </div>
-              </div>
-            </div>
+              )}
+            </Sticky>
 
             <div className="header-main__title active-burger-title">
               <h1>Lorem ipsum dolor sit amet</h1>
@@ -229,7 +251,7 @@ const MainPage = () => {
           <img className="footer-logo" src={frame} alt="" />
         </div>
       </section>
-    </>
+    </StickyContainer>
   )
 }
 

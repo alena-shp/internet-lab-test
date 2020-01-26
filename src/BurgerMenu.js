@@ -1,19 +1,13 @@
-import React, { useState } from "react"
+import React from "react"
 import classNames from "classnames"
 import "./BurgerMenu.scss"
 
 import line1 from "./assets/line1.png"
 import phone from "./assets/phone.svg"
 import instagram from "./assets/instagram.svg"
-import vk from  "./assets/vk.svg"
+import vk from "./assets/vk.svg"
 
-const BurgerMenu = () => {
-  const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false)
-
-  const toggleOpenBurgerMenu = () => {
-    setIsOpenBurgerMenu(!isOpenBurgerMenu)
-  }
-
+const BurgerMenu = ({ isOpenBurgerMenu, toggleOpenBurgerMenu }) => {
   const menuburger = classNames({
     menu: true,
     "menu--open": isOpenBurgerMenu
@@ -24,15 +18,12 @@ const BurgerMenu = () => {
     "menu__button--open": isOpenBurgerMenu
   })
 
-  
-
-
   return (
     <div className="burgermenu">
       <div className={btnburger}>
         <span onClick={toggleOpenBurgerMenu}>
-          <img src={line1} alt="" />
-          <img src={line1} alt="" />
+          <img src={line1} alt="" className="sticky-burger"/>
+          <img src={line1} alt="" className="sticky-burger"/>
         </span>
       </div>
       <div className={menuburger}>

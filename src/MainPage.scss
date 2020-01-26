@@ -48,7 +48,9 @@ $screen-xl-max: 1199px;
 }
 .inside {
   margin: 0 auto;
-  max-width: 1180px;
+  @media (min-width: $screen-sm) {
+    padding: 0 95px;
+  }
 }
 
 // === / common ===
@@ -56,6 +58,8 @@ $screen-xl-max: 1199px;
 // === header ===
 .header {
   color: $color-white;
+  position: relative;
+  z-index: 100;
 
   @media (min-width: $screen-sm) {
     background: url("./assets/background.png") no-repeat 50% 50%;
@@ -87,18 +91,22 @@ $screen-xl-max: 1199px;
     }
     @media (max-width: $screen-xs-max) {
       background: url("./assets/background.png") no-repeat 50% 50%;
-      background-size: cover;
       padding: 18px 14px 12px 14px;
     }
 
     .menu {
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      left: 0;
       align-items: center;
       display: flex;
       flex-shrink: 1;
       justify-content: space-between;
+      padding: 20px;
 
       @media (min-width: $screen-sm) {
-        padding-bottom: 30px;
         &__logo {
           width: 220px;
           height: auto;
@@ -306,64 +314,65 @@ $screen-xl-max: 1199px;
 // === / header ===
 
 // === person ===
-.outside {
-  .person {
-    background-color: $color-white;
+.person {
+  background-color: $color-white;
+  position: relative;
+  z-index: -1;
 
-    &-title {
-      color: $color-red;
-      font-family: "Bebas Neue", sans-serif;
-      text-transform: uppercase;
-      text-align: center;
+  &-title {
+    color: $color-red;
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
 
-      @media (min-width: $screen-sm) {
-        font-size: 70px;
-        margin: 60px 0;
-        line-height: 70px;
-      }
-      @media (max-width: $screen-xs-max) {
-        font-size: 40px;
-        line-height: 40px;
-        margin-top: 70px;
-        margin-bottom: 34px;
-      }
+    @media (min-width: $screen-sm) {
+      font-size: 70px;
+      margin: 60px 0;
+      line-height: 70px;
     }
-
-    &-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &__left,
-      &__right {
-        background-color: $color-white;
-        border: none;
-        margin: 0;
-        padding: 0;
-        cursor: pointer;
-        &:not(:first-child) {
-          margin-left: 50px;
-        }
-        &:not(:last-child) {
-          margin-right: 50px;
-        }
-
-        img {
-          width: 30px;
-          height: 25px;
-        }
-      }
-      &__num {
-        color: $color-gray;
-        font-family: "MuseoSansBold", sans-serif;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 29px;
-      }
-      @media (max-width: $screen-xs-max) {
-        margin-bottom: 60px;
-      }
+    @media (max-width: $screen-xs-max) {
+      font-size: 40px;
+      line-height: 40px;
+      margin-top: 70px;
+      margin-bottom: 34px;
     }
   }
+
+  &-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__left,
+    &__right {
+      background-color: $color-white;
+      border: none;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+      &:not(:first-child) {
+        margin-left: 50px;
+      }
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+
+      img {
+        width: 30px;
+        height: 25px;
+      }
+    }
+    &__num {
+      color: $color-gray;
+      font-family: "MuseoSansBold", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 29px;
+    }
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 60px;
+    }
+  }
+
   .person-slid {
     position: relative;
 
@@ -741,13 +750,13 @@ $screen-xl-max: 1199px;
 
 // === active-burger ===
 
-.active-burger {
+.menu--active {
   background-color: $color-white;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  padding: 10px 20px;
+  padding: 20px;
 
   .menu__logo {
     filter: invert(1);
@@ -756,11 +765,14 @@ $screen-xl-max: 1199px;
   .menu__links-phone {
     color: $color-black;
   }
+
+  .sticky-burger {
+    filter: invert(1);
+  }
 }
 
-  .active-burger-title {
-    padding-top: 110px;
-  }
-
+.active-burger-title {
+  padding-top: 110px;
+}
 
 // ===  / active-burger ===
