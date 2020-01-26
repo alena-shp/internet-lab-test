@@ -17,6 +17,7 @@ import sony from "./assets/sony.svg"
 import vk from "./assets/vk.svg"
 import amazon from "./assets/amazon.svg"
 import compan from "./assets/compan.svg"
+import frame from "./assets/frame.png"
 import SimpleSlider from "./SimpleSlider"
 
 const MainPage = () => {
@@ -222,7 +223,7 @@ const MainPage = () => {
       <section className="outside footer">
         <div className="inside">
           <p className="footer-copywriting">© Копирайт 2019</p>
-          <img className="footer-logo" src="" alt="" />
+          <img className="footer-logo" src={frame} alt="" />
         </div>
       </section>
     </>

@@ -564,10 +564,10 @@ $screen-xl-max: 1199px;
     padding: 0 20px 70px 20px;
     margin-top: 80px;
   }
-  
+
   @media (max-width: $screen-xs-max) {
-  padding: 40px 20px 50px 20px;
-}
+    padding: 40px 20px 50px 20px;
+  }
 
   .inside {
     display: flex;
@@ -671,7 +671,7 @@ $screen-xl-max: 1199px;
     &__text {
       color: $color-gray;
       font-family: "MuseoSansRegular", sans-serif;
-     
+
       @media (min-width: $screen-sm) {
         text-align: start;
         font-size: 18px;
@@ -686,3 +686,36 @@ $screen-xl-max: 1199px;
 }
 
 // === / partners ===
+
+// === footer ===
+
+.footer {
+  @media (min-width: $screen-sm) {
+    padding: 20px 86px 20px 86px;
+  }
+  @media (max-width: $screen-xs-max) {
+    padding: 20px 16px 20px 16px;
+  }
+  .inside {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-copywriting {
+    color: $color-gray;
+    font-family: "MuseoSansRegular", sans-serif;
+    font-size: 18px;
+
+    @media (max-width: $screen-xs-max) {
+      text-transform: lowercase;
+    }
+  }
+
+  &-logo {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+// === / footer ===
