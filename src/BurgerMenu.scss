@@ -5,11 +5,11 @@
     display: none;
     position: fixed;
 
-    bottom: 0;
-    right: 0;
-    left: 0;
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(50px);
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     @media (min-width: $screen-sm) {
       top: 98px;
@@ -20,8 +20,8 @@
     }
 
     &--open {
-      display: flex;
       align-items: center;
+      display: flex;
       justify-content: center;
 
       @media (max-width: $screen-xs-max) {
@@ -60,8 +60,8 @@
     }
 
     .menu__phone {
-      display: flex;
       align-items: center;
+      display: flex;
       justify-content: center;
       margin-bottom: 24px;
 
@@ -70,9 +70,9 @@
       }
 
       span {
-        font-size: 24px;
         color: #303030;
         font-family: "MuseoSansBold", sans-serif;
+        font-size: 24px;
       }
     }
 
@@ -84,9 +84,9 @@
 
     &__button {
       span {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
         img:first-child {
           margin-bottom: 10px;
         }
@@ -94,12 +94,12 @@
 
       &--open {
         img {
-          transform: rotate(45deg) translate(-2px, -9px);
           filter: invert(1);
+          transform: rotate(45deg) translate(-2px, -9px);
         }
         img:first-child {
-          transform: rotate(-45deg) translate(0, 6px);
           filter: invert(1);
+          transform: rotate(-45deg) translate(0, 6px);
         }
       }
     }

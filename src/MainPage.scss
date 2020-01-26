@@ -52,7 +52,6 @@ $screen-xl-max: 1199px;
     padding: 0 95px;
   }
 }
-
 // === / common ===
 
 // === header ===
@@ -310,7 +309,6 @@ $screen-xl-max: 1199px;
     }
   }
 }
-
 // === / header ===
 
 // === person ===
@@ -582,7 +580,6 @@ $screen-xl-max: 1199px;
     }
   }
 }
-
 // === / person ===
 
 // === partners ===
@@ -712,11 +709,9 @@ $screen-xl-max: 1199px;
     }
   }
 }
-
 // === / partners ===
 
 // === footer ===
-
 .footer {
   @media (min-width: $screen-sm) {
     padding: 20px 86px 20px 86px;
@@ -745,11 +740,9 @@ $screen-xl-max: 1199px;
     height: 38px;
   }
 }
-
 // === / footer ===
 
 // === active-burger ===
-
 .menu--active {
   background-color: $color-white;
   position: fixed;
@@ -774,5 +767,4 @@ $screen-xl-max: 1199px;
 .active-burger-title {
   padding-top: 110px;
 }
-
 // ===  / active-burger ===

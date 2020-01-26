@@ -22,8 +22,8 @@ const BurgerMenu = ({ isOpenBurgerMenu, toggleOpenBurgerMenu }) => {
     <div className="burgermenu">
       <div className={btnburger}>
         <span onClick={toggleOpenBurgerMenu}>
-          <img src={line1} alt="" className="sticky-burger"/>
-          <img src={line1} alt="" className="sticky-burger"/>
+          <img src={line1} alt="" className="sticky-burger" />
+          <img src={line1} alt="" className="sticky-burger" />
         </span>
       </div>
       <div className={menuburger}>
